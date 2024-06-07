@@ -24,7 +24,7 @@ class DkimMailServiceProvider extends MailServiceProvider
             );
 
             $mailer->setQueue(app('queue'));
-            
+
             if (method_exists($this, 'setMailerDependencies')) {
                 $this->setMailerDependencies($mailer, $app);
             }
